@@ -1,6 +1,6 @@
 
-### Customization Tips:
-- **About**: Implement a Charting Library in React.js
+### Implement a Charting Library in React.js
+
 - **Installation**:
 1. Clone the repository:
    ```sh
