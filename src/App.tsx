@@ -1,24 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import { Chart as ChartJS} from 'chart.js';
+import sourceData from "./data/sourceData.json";
+import NewChart from "./components/NewChart";
 
 function App() {
+  const [userData, setUserData] = useState({
+    labels: sourceData.map((data) => {
+      return new Date(data.timestamp)
+  }),
+    datasets: [
+      {
+        label: "Value",
+        data: sourceData.map((data) => data.value),
+        backgroundColor: [
+          "red","blue","yellow","green","orange"
+        ],
+        borderColor: "black",
+        borderWidth: 2,
+      },
+    ],
+  });
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Implement a Charting Library in React.js</h1>
       </header>
+      <div className="App-main">
+        <NewChart />
+      </div>
     </div>
   );
 }
