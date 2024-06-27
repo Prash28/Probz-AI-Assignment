@@ -1,7 +1,7 @@
 
 ### Customization Tips:
-- **About Section**: Implement a Charting Library in React.js
-- **Installation Section**:
+- **About**: Implement a Charting Library in React.js
+- **Installation**:
 1. Clone the repository:
    ```sh
     git clone https://github.com/Prash28/Probz-AI-Assignment.git
